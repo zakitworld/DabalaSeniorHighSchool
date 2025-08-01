@@ -1,0 +1,315 @@
+@page "/contacts"
+@rendermode InteractiveAuto
+@using System.ComponentModel.DataAnnotations
+
+<PageTitle>Contact Us - Dabala Senior High School</PageTitle>
+
+<div class="contacts-page">
+    <div class="container">
+        <!-- Hero Section -->
+        <section class="contacts-hero">
+            <div class="hero-content">
+                <h1>Contact Us</h1>
+                <p>Get in Touch with Dabala Senior High School</p>
+            </div>
+        </section>
+
+        <!-- Contact Information -->
+        <section class="contact-information">
+            <div class="section-header">
+                <h2>Contact Information</h2>
+                <div class="separator">
+                    <div class="separator-line"></div>
+                    <div class="separator-diamond"></div>
+                    <div class="separator-line"></div>
+                </div>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h4>Office Number</h4>
+                    <p>(+233) 0540306405</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h4>Headmaster's Contacts</h4>
+                    <p>0246633824 / 0200126686</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h4>School's Email</h4>
+                    <p>dabalaseniorhigh@gmail.com</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h4>Postal Address</h4>
+                    <p>Box TS 33, Dabala</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Visiting Hours -->
+        <section class="visiting-hours">
+            <div class="section-header">
+                <h2>Visiting Hours</h2>
+                <div class="separator">
+                    <div class="separator-line"></div>
+                    <div class="separator-diamond"></div>
+                    <div class="separator-line"></div>
+                </div>
+            </div>
+            <div class="visiting-grid">
+                <div class="visiting-card">
+                    <div class="visiting-icon">
+                        <i class="fas fa-calendar-day"></i>
+                    </div>
+                    <h4>Second Saturdays</h4>
+                    <p class="visiting-time">9:00AM - 4:00PM</p>
+                    <p class="visiting-desc">Every second Saturday of the month</p>
+                </div>
+                <div class="visiting-card">
+                    <div class="visiting-icon">
+                        <i class="fas fa-calendar-week"></i>
+                    </div>
+                    <h4>Second Sundays</h4>
+                    <p class="visiting-time">9:00AM - 4:00PM</p>
+                    <p class="visiting-desc">Every second Sunday of the month</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Form -->
+        <section class="contact-form-section">
+            <div class="section-header">
+                <h2>Send Us a Message</h2>
+                <div class="separator">
+                    <div class="separator-line"></div>
+                    <div class="separator-diamond"></div>
+                    <div class="separator-line"></div>
+                </div>
+            </div>
+            <div class="form-container">
+                <EditForm Model="@contactForm" OnValidSubmit="@HandleSubmit" class="contact-form">
+                    <DataAnnotationsValidator />
+                    <ValidationSummary class="validation-errors" />
+                    
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <InputText @bind-Value="contactForm.Name" id="name" class="form-control" />
+                            <ValidationMessage For="@(() => contactForm.Name)" />
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <InputText @bind-Value="contactForm.Email" id="email" type="email" class="form-control" />
+                            <ValidationMessage For="@(() => contactForm.Email)" />
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <InputText @bind-Value="contactForm.Phone" id="phone" type="tel" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject *</label>
+                            <InputSelect @bind-Value="contactForm.Subject" id="subject" class="form-control">
+                                <option value="">Select Subject</option>
+                                <option value="admission">Admission Inquiry</option>
+                                <option value="academic">Academic Information</option>
+                                <option value="general">General Inquiry</option>
+                                <option value="complaint">Complaint</option>
+                                <option value="suggestion">Suggestion</option>
+                            </InputSelect>
+                            <ValidationMessage For="@(() => contactForm.Subject)" />
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="message">Message *</label>
+                            <InputTextArea @bind-Value="contactForm.Message" id="message" rows="6" class="form-control" />
+                            <ValidationMessage For="@(() => contactForm.Message)" />
+                        </div>
+                    </div>
+                    
+                    @if (!string.IsNullOrEmpty(submitMessage))
+                    {
+                        <div class="alert alert-@(submitSuccess ? "success" : "danger")">
+                            @submitMessage
+                        </div>
+                    }
+                    
+                    <div class="form-actions">
+                        <button type="submit" class="submit-btn" disabled="@isSubmitting">
+                            @if (isSubmitting)
+                            {
+                                <i class="fas fa-spinner fa-spin"></i>
+                                <span>Sending...</span>
+                            }
+                            else
+                            {
+                                <span>Send Message</span>
+                            }
+                        </button>
+                        <button type="button" class="reset-btn" @onclick="ResetForm">Clear Form</button>
+                    </div>
+                </EditForm>
+            </div>
+        </section>
+
+        <!-- Location Map -->
+        <section class="location-section">
+            <div class="section-header">
+                <h2>Our Location</h2>
+                <div class="separator">
+                    <div class="separator-line"></div>
+                    <div class="separator-diamond"></div>
+                    <div class="separator-line"></div>
+                </div>
+            </div>
+            <div class="location-content">
+                <div class="map-container">
+                    <div class="map-placeholder">
+                        <i class="fas fa-map"></i>
+                        <h4>Interactive Map</h4>
+                        <p>Dabala Senior High School</p>
+                        <p>Volta Region, Ghana</p>
+                    </div>
+                </div>
+                <div class="location-info">
+                    <h4>How to Find Us</h4>
+                    <div class="directions">
+                        <div class="direction-item">
+                            <i class="fas fa-car"></i>
+                            <div>
+                                <h5>By Car</h5>
+                                <p>Take the main road to Dabala and follow the signs to the school campus.</p>
+                            </div>
+                        </div>
+                        <div class="direction-item">
+                            <i class="fas fa-bus"></i>
+                            <div>
+                                <h5>By Public Transport</h5>
+                                <p>Take a bus or tro-tro to Dabala and ask for directions to the school.</p>
+                            </div>
+                        </div>
+                        <div class="direction-item">
+                            <i class="fas fa-walking"></i>
+                            <div>
+                                <h5>On Foot</h5>
+                                <p>The school is easily accessible by foot from the main Dabala town center.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Emergency Contacts -->
+        <section class="emergency-contacts">
+            <div class="section-header">
+                <h2>Emergency Contacts</h2>
+                <div class="separator">
+                    <div class="separator-line"></div>
+                    <div class="separator-diamond"></div>
+                    <div class="separator-line"></div>
+                </div>
+            </div>
+            <div class="emergency-grid">
+                <div class="emergency-card">
+                    <div class="emergency-icon">
+                        <i class="fas fa-ambulance"></i>
+                    </div>
+                    <h4>Medical Emergency</h4>
+                    <p>School Health Center: (+233) 0540306405</p>
+                    <p>Nearest Hospital: Dabala District Hospital</p>
+                </div>
+                <div class="emergency-card">
+                    <div class="emergency-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h4>Security</h4>
+                    <p>School Security: (+233) 246633824</p>
+                    <p>Local Police: Dabala Police Station</p>
+                </div>
+                <div class="emergency-card">
+                    <div class="emergency-icon">
+                        <i class="fas fa-fire-extinguisher"></i>
+                    </div>
+                    <h4>Fire Emergency</h4>
+                    <p>Fire Service: 192</p>
+                    <p>School Emergency: (+233) 0540306405</p>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+@code {
+    private ContactFormModel contactForm = new();
+    private string submitMessage = string.Empty;
+    private bool submitSuccess = false;
+    private bool isSubmitting = false;
+
+    private async Task HandleSubmit()
+    {
+        isSubmitting = true;
+        submitMessage = string.Empty;
+        
+        try
+        {
+            // Simulate form submission delay
+            await Task.Delay(2000);
+            
+            // In a real application, you would send this data to a backend service
+            // For now, we'll just show a success message
+            submitMessage = "Thank you for your message! We will get back to you soon.";
+            submitSuccess = true;
+            
+            // Reset form after successful submission
+            contactForm = new ContactFormModel();
+        }
+        catch (Exception)
+        {
+            submitMessage = "Sorry, there was an error sending your message. Please try again later.";
+            submitSuccess = false;
+        }
+        finally
+        {
+            isSubmitting = false;
+            StateHasChanged();
+        }
+    }
+    
+    private void ResetForm()
+    {
+        contactForm = new ContactFormModel();
+        submitMessage = string.Empty;
+        StateHasChanged();
+    }
+
+    public class ContactFormModel
+    {
+        [Required(ErrorMessage = "Full name is required")]
+        [StringLength(100, ErrorMessage = "Name cannot exceed 100 characters")]
+        public string Name { get; set; } = string.Empty;
+
+        [Required(ErrorMessage = "Email address is required")]
+        [EmailAddress(ErrorMessage = "Please enter a valid email address")]
+        public string Email { get; set; } = string.Empty;
+
+        [Phone(ErrorMessage = "Please enter a valid phone number")]
+        public string? Phone { get; set; } = string.Empty;
+
+        [Required(ErrorMessage = "Please select a subject")]
+        public string Subject { get; set; } = string.Empty;
+
+        [Required(ErrorMessage = "Message is required")]
+        [StringLength(1000, ErrorMessage = "Message cannot exceed 1000 characters")]
+        [MinLength(10, ErrorMessage = "Message must be at least 10 characters long")]
+        public string Message { get; set; } = string.Empty;
+    }
+} 

@@ -1,0 +1,315 @@
+@page "/admission"
+@rendermode InteractiveAuto
+
+<PageTitle>Admission - Dabala Senior High School</PageTitle>
+
+<div class="admission-page">
+    <div class="container">
+        <!-- Hero Section -->
+        <section class="admission-hero">
+            <div class="hero-content">
+                <h1>2024/2025 Admission</h1>
+                <p>Join Dabala Senior High School - Excellence in Education</p>
+            </div>
+        </section>
+
+        <!-- Admission Overview -->
+        <section class="admission-overview">
+            <div class="section-header">
+                <h2>Admission Information</h2>
+                <div class="separator">
+                    <div class="separator-line"></div>
+                    <div class="separator-diamond"></div>
+                    <div class="separator-line"></div>
+                </div>
+            </div>
+            <div class="overview-content">
+                <div class="overview-text">
+                    <p>The management of Dabala Senior High School wishes to inform the general public, especially parents and guardians of children placed in DABASCO, that they can complete admission online.</p>
+                    <p>Online admission saves travel time and allows parents/guardians to fill an online form, get enrolled without delay, and access the kit list on the website, saving cost and providing ample preparation time.</p>
+                    <p>Parents who cannot use the website should call the school to pick up brochures/prospectus.</p>
+                </div>
+                <div class="overview-image">
+                    <img src="/images/placeholder.svg" alt="Admission Banner" />
+                </div>
+            </div>
+        </section>
+
+        <!-- Admission Requirements -->
+        <section class="admission-requirements">
+            <div class="section-header">
+                <h2>Admission Requirements</h2>
+                <div class="separator">
+                    <div class="separator-line"></div>
+                    <div class="separator-diamond"></div>
+                    <div class="separator-line"></div>
+                </div>
+            </div>
+            <div class="requirements-grid">
+                <div class="requirement-card">
+                    <div class="requirement-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h4>Basic Education Certificate</h4>
+                    <p>Original BECE certificate with at least 6 passes including English and Mathematics.</p>
+                </div>
+                <div class="requirement-card">
+                    <div class="requirement-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h4>Placement Form</h4>
+                    <p>Original placement form from the Ghana Education Service (GES) showing placement to DABASCO.</p>
+                </div>
+                <div class="requirement-card">
+                    <div class="requirement-icon">
+                        <i class="fas fa-id-card"></i>
+                    </div>
+                    <h4>Birth Certificate</h4>
+                    <p>Original birth certificate or affidavit of age declaration.</p>
+                </div>
+                <div class="requirement-card">
+                    <div class="requirement-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h4>Parent/Guardian Information</h4>
+                    <p>Contact information and identification documents of parent or guardian.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Admission Procedures -->
+        <section class="admission-procedures">
+            <div class="section-header">
+                <h2>Admission Procedures</h2>
+                <div class="separator">
+                    <div class="separator-line"></div>
+                    <div class="separator-diamond"></div>
+                    <div class="separator-line"></div>
+                </div>
+            </div>
+            <div class="procedures-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-number">1</div>
+                    <div class="timeline-content">
+                        <h4>Online Application</h4>
+                        <p>Complete the online admission form with all required information and upload necessary documents.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-number">2</div>
+                    <div class="timeline-content">
+                        <h4>Document Verification</h4>
+                        <p>School administration will verify all submitted documents and information.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-number">3</div>
+                    <div class="timeline-content">
+                        <h4>Payment of Fees</h4>
+                        <p>Pay the required admission fees through the provided payment methods.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-number">4</div>
+                    <div class="timeline-content">
+                        <h4>Confirmation</h4>
+                        <p>Receive admission confirmation and access to student kit list and school information.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Online Application Form -->
+        <section class="application-form">
+            <div class="section-header">
+                <h2>Online Application Form</h2>
+                <div class="separator">
+                    <div class="separator-line"></div>
+                    <div class="separator-diamond"></div>
+                    <div class="separator-line"></div>
+                </div>
+            </div>
+            <div class="form-container">
+                <form class="admission-form">
+                    <div class="form-section">
+                        <h3>Student Information</h3>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="firstName">First Name *</label>
+                                <input type="text" id="firstName" name="firstName" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name *</label>
+                                <input type="text" id="lastName" name="lastName" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="dateOfBirth">Date of Birth *</label>
+                                <input type="date" id="dateOfBirth" name="dateOfBirth" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="gender">Gender *</label>
+                                <select id="gender" name="gender" required>
+                                    <option value="">Select Gender</option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="beceIndex">BECE Index Number *</label>
+                                <input type="text" id="beceIndex" name="beceIndex" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="program">Program Choice *</label>
+                                <select id="program" name="program" required>
+                                    <option value="">Select Program</option>
+                                    <option value="general-arts">General Arts</option>
+                                    <option value="general-science">General Science</option>
+                                    <option value="business">Business</option>
+                                    <option value="home-economics">Home Economics</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>Parent/Guardian Information</h3>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="parentName">Parent/Guardian Name *</label>
+                                <input type="text" id="parentName" name="parentName" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="parentPhone">Phone Number *</label>
+                                <input type="tel" id="parentPhone" name="parentPhone" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="parentEmail">Email Address</label>
+                                <input type="email" id="parentEmail" name="parentEmail" />
+                            </div>
+                            <div class="form-group">
+                                <label for="parentOccupation">Occupation</label>
+                                <input type="text" id="parentOccupation" name="parentOccupation" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>Contact Information</h3>
+                        <div class="form-grid">
+                            <div class="form-group full-width">
+                                <label for="address">Residential Address *</label>
+                                <textarea id="address" name="address" rows="3" required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="emergencyContact">Emergency Contact Name *</label>
+                                <input type="text" id="emergencyContact" name="emergencyContact" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="emergencyPhone">Emergency Phone *</label>
+                                <input type="tel" id="emergencyPhone" name="emergencyPhone" required />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>Documents Upload</h3>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="beceCertificate">BECE Certificate *</label>
+                                <input type="file" id="beceCertificate" name="beceCertificate" accept=".pdf,.jpg,.jpeg,.png" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="placementForm">Placement Form *</label>
+                                <input type="file" id="placementForm" name="placementForm" accept=".pdf,.jpg,.jpeg,.png" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="birthCertificate">Birth Certificate *</label>
+                                <input type="file" id="birthCertificate" name="birthCertificate" accept=".pdf,.jpg,.jpeg,.png" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="passportPhoto">Passport Photo *</label>
+                                <input type="file" id="passportPhoto" name="passportPhoto" accept=".jpg,.jpeg,.png" required />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="submit-btn">Submit Application</button>
+                        <button type="reset" class="reset-btn">Reset Form</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Fees Information -->
+        <section class="fees-information">
+            <div class="section-header">
+                <h2>Fees Information</h2>
+                <div class="separator">
+                    <div class="separator-line"></div>
+                    <div class="separator-diamond"></div>
+                    <div class="separator-line"></div>
+                </div>
+            </div>
+            <div class="fees-grid">
+                <div class="fee-card">
+                    <h4>Admission Fee</h4>
+                    <div class="fee-amount">GH₵ 500.00</div>
+                    <p>One-time payment for new students</p>
+                </div>
+                <div class="fee-card">
+                    <h4>Tuition Fee</h4>
+                    <div class="fee-amount">GH₵ 200.00</div>
+                    <p>Per term (3 terms per academic year)</p>
+                </div>
+                <div class="fee-card">
+                    <h4>Development Levy</h4>
+                    <div class="fee-amount">GH₵ 100.00</div>
+                    <p>Per term for school development projects</p>
+                </div>
+                <div class="fee-card">
+                    <h4>Other Charges</h4>
+                    <div class="fee-amount">GH₵ 150.00</div>
+                    <p>Library, laboratory, and other facilities</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Information -->
+        <section class="contact-info">
+            <div class="section-header">
+                <h2>Need Help?</h2>
+                <div class="separator">
+                    <div class="separator-line"></div>
+                    <div class="separator-diamond"></div>
+                    <div class="separator-line"></div>
+                </div>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h4>Call Us</h4>
+                    <p>(+233) 0540306405</p>
+                    <p>(+233) 246633824</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h4>Email Us</h4>
+                    <p>dabalaseniorhigh@gmail.com</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h4>Visit Us</h4>
+                    <p>Box TS 33, Dabala</p>
+                    <p>Volta Region, Ghana</p>
+                </div>
+            </div>
+        </section>
+    </div>
+</div> 

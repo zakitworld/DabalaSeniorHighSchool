@@ -1,0 +1,605 @@
+/* Student Life Page Styles */
+.student-life-page {
+    background-color: #f9f9f9;
+}
+
+/* Hero Section */
+.student-life-hero {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/images/student-life-banner.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 40px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+}
+
+/* Section Headers */
+.section-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-header h2 {
+    color: #008080;
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Separator */
+.separator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.separator-line {
+    height: 2px;
+    background-color: #ff8c00;
+    flex: 1;
+    max-width: 200px;
+}
+
+.separator-diamond {
+    width: 12px;
+    height: 12px;
+    background-color: #ff8c00;
+    transform: rotate(45deg);
+    margin: 0 15px;
+}
+
+/* Campus Life */
+.campus-life {
+    padding: 40px 0;
+    background-color: #fff;
+    margin-bottom: 40px;
+}
+
+.campus-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.campus-text p {
+    margin-bottom: 20px;
+    line-height: 1.8;
+    color: #333;
+    font-size: 1.1rem;
+}
+
+.campus-image img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Student Activities */
+.student-activities {
+    padding: 40px 0;
+    background-color: #f9f9f9;
+    margin-bottom: 40px;
+}
+
+.activities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.activity-card {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.activity-card:hover {
+    transform: translateY(-5px);
+}
+
+.activity-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #008080, #006666);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.activity-icon i {
+    font-size: 1.8rem;
+    color: #fff;
+}
+
+.activity-card h4 {
+    color: #008080;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.activity-card p {
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.activity-details {
+    display: flex;
+    gap: 20px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.activity-details span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.activity-details i {
+    color: #ff8c00;
+}
+
+/* Sports & Athletics */
+.sports-athletics {
+    padding: 40px 0;
+    background-color: #fff;
+    margin-bottom: 40px;
+}
+
+.sports-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.sports-text h4 {
+    color: #008080;
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.sports-text p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.sports-achievements h5 {
+    color: #008080;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.sports-achievements ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sports-achievements li {
+    padding: 8px 0;
+    padding-left: 25px;
+    position: relative;
+    color: #333;
+    line-height: 1.5;
+}
+
+.sports-achievements li::before {
+    content: '🏆';
+    position: absolute;
+    left: 0;
+}
+
+.sports-gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.sports-image {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.sports-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.sports-image:hover img {
+    transform: scale(1.05);
+}
+
+.sports-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.7);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Cultural Activities */
+.cultural-activities {
+    padding: 40px 0;
+    background-color: #f9f9f9;
+    margin-bottom: 40px;
+}
+
+.cultural-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.cultural-card {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.cultural-card:hover {
+    transform: translateY(-5px);
+}
+
+.cultural-image {
+    height: 200px;
+    overflow: hidden;
+}
+
+.cultural-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.cultural-card:hover .cultural-image img {
+    transform: scale(1.1);
+}
+
+.cultural-card h4 {
+    color: #008080;
+    font-size: 1.2rem;
+    margin: 20px 20px 10px;
+    font-weight: bold;
+}
+
+.cultural-card p {
+    color: #333;
+    margin: 0 20px 20px;
+    line-height: 1.6;
+}
+
+/* Student Leadership */
+.student-leadership {
+    padding: 40px 0;
+    background-color: #fff;
+    margin-bottom: 40px;
+}
+
+.leadership-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.leadership-text h4 {
+    color: #008080;
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.leadership-text p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.leadership-positions {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.position-card {
+    background-color: #f9f9f9;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.position-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.position-icon {
+    width: 60px;
+    height: 60px;
+    background-color: #ff8c00;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+}
+
+.position-icon i {
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.position-card h5 {
+    color: #008080;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.position-card p {
+    color: #333;
+    line-height: 1.5;
+    font-size: 0.9rem;
+}
+
+/* Campus Facilities */
+.campus-facilities {
+    padding: 40px 0;
+    background-color: #f9f9f9;
+    margin-bottom: 40px;
+}
+
+.facilities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.facility-card {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.facility-card:hover {
+    transform: translateY(-5px);
+}
+
+.facility-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #008080, #006666);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+
+.facility-icon i {
+    font-size: 1.8rem;
+    color: #fff;
+}
+
+.facility-card h4 {
+    color: #008080;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.facility-card p {
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Student Testimonials */
+.student-testimonials {
+    padding: 40px 0;
+    background-color: #fff;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.testimonial-card {
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+}
+
+.testimonial-content {
+    margin-bottom: 20px;
+}
+
+.testimonial-content p {
+    font-style: italic;
+    line-height: 1.6;
+    color: #333;
+    font-size: 1.1rem;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.author-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #008080;
+}
+
+.author-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.author-info h5 {
+    color: #008080;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.author-info span {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .student-life-hero {
+        height: 250px;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-content p {
+        font-size: 1rem;
+    }
+    
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+    
+    .campus-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .activities-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .sports-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .cultural-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    
+    .leadership-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .leadership-positions {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+    
+    .facilities-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .activity-details {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .student-life-hero {
+        height: 200px;
+    }
+    
+    .hero-content h1 {
+        font-size: 1.5rem;
+    }
+    
+    .section-header h2 {
+        font-size: 1.5rem;
+    }
+    
+    .activity-card,
+    .cultural-card,
+    .facility-card,
+    .testimonial-card {
+        padding: 20px;
+    }
+    
+    .position-card {
+        padding: 20px;
+    }
+    
+    .sports-gallery {
+        grid-template-columns: 1fr;
+    }
+    
+    .sports-image {
+        height: 150px;
+    }
+    
+    .author-image {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .testimonial-content p {
+        font-size: 1rem;
+    }
+} 

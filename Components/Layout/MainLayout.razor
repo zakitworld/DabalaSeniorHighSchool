@@ -1,0 +1,116 @@
+﻿@inherits LayoutComponentBase
+
+<div class="page">
+    <!-- Top Header Bar -->
+    <div class="top-header">
+        <div class="container">
+            <div class="top-header-content">
+                <div class="contact-info">
+                    <span class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        dabalaseniorhigh@gmail.com
+                    </span>
+                    <span class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        (+233) 246633824
+                    </span>
+                </div>
+                <div class="quick-links">
+                    <a href="#" class="quick-link">
+                        <i class="fab fa-facebook"></i>
+                        facebook
+                    </a>
+                    <a href="#" class="quick-link">
+                        <i class="fas fa-graduation-cap"></i>
+                        Staff
+                    </a>
+                    <a href="#" class="quick-link">
+                        <i class="fas fa-user"></i>
+                        Students
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <nav class="main-nav">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo-section">
+                    <div class="school-logo">
+                        <div class="logo-circle">
+                            <div class="logo-text">
+                                <div class="school-name">DABALA SENIOR HIGH SCHOOL</div>
+                                <div class="location">DABALA</div>
+                                <div class="founded">FOUNDED 1963</div>
+                                <div class="motto">TRUTH, LOVE & RESPONSIBILITY</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="school-name-short">DABALA SHS</div>
+                </div>
+                <div class="nav-links">
+                    <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+                        <i class="fas fa-home"></i>
+                        Home
+                    </NavLink>
+                    <NavLink class="nav-link" href="about">
+                        About Us
+                    </NavLink>
+                    <NavLink class="nav-link" href="admission">
+                        Admission
+                    </NavLink>
+                    <NavLink class="nav-link" href="contacts">
+                        Contacts
+                    </NavLink>
+                    <NavLink class="nav-link" href="pta">
+                        PTA
+                    </NavLink>
+                    <NavLink class="nav-link" href="student-life">
+                        Student Life
+                    </NavLink>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        @Body
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contact Information</h3>
+                    <p><i class="fas fa-phone"></i> (+233) 0540306405</p>
+                    <p><i class="fas fa-envelope"></i> dabalaseniorhigh@gmail.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Box TS 33, Dabala</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Visiting Hours</h3>
+                    <p>Second Saturdays: 9:00AM - 4:00PM</p>
+                    <p>Second Sundays: 9:00AM - 4:00PM</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <a href="admission">Admission</a>
+                    <a href="about">About Us</a>
+                    <a href="contacts">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Dabala Senior High School. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</div>
+
+<div id="blazor-error-ui" data-nosnippet>
+    An unhandled error has occurred.
+    <a href="." class="reload">Reload</a>
+    <span class="dismiss">🗙</span>
+</div>

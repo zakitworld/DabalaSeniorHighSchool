@@ -1,0 +1,197 @@
+﻿@page "/"
+@rendermode InteractiveAuto
+
+<div class="home-page">
+    <!-- Image Slider Section -->
+    <section class="hero-slider">
+        <div class="slider-container">
+            <div class="slider-image">
+                <img src="/images/placeholder.svg" alt="Dabala Senior High School Entrance" />
+                <div class="slider-overlay">
+                    <div class="slider-content">
+                        <h1>Welcome to Dabala Senior High School</h1>
+                        <p>Excellence in Education Since 1963</p>
+                        <a href="admission" class="cta-button">2024 Admission</a>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-nav">
+                <button class="slider-arrow prev" @onclick="PreviousSlide">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="slider-arrow next" @onclick="NextSlide">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Values Section -->
+    <section class="core-values">
+        <div class="container">
+            <div class="values-header">
+                <h2>CORE VALUES: Truth, Love, Responsibility</h2>
+            </div>
+            <div class="video-section">
+                <div class="video-player">
+                    <div class="video-placeholder">
+                        <i class="fas fa-play-circle"></i>
+                        <span>School Introduction Video</span>
+                    </div>
+                    <div class="video-controls">
+                        <span class="video-time">0:00 / 0:59</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill"></div>
+                        </div>
+                        <div class="control-buttons">
+                            <button class="control-btn"><i class="fas fa-volume-up"></i></button>
+                            <button class="control-btn"><i class="fas fa-ellipsis-v"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="separator">
+                <div class="separator-line"></div>
+                <div class="separator-diamond"></div>
+                <div class="separator-line"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Section -->
+    <section class="main-content-section">
+        <div class="container">
+            <div class="content-grid">
+                <!-- Left Column - Admission -->
+                <div class="content-column">
+                    <div class="content-card admission-card">
+                        <h3>2024/2025 ADMISSION</h3>
+                        <div class="card-content">
+                            <p>The management of Dabala Senior High School wishes to inform the general public, especially parents and guardians of children placed in DABASCO, that they can complete admission online.</p>
+                            <p>Online admission saves travel time and allows parents/guardians to fill an online form, get enrolled without delay, and access the kit list on the website, saving cost and providing ample preparation time.</p>
+                            <p>Parents who cannot use the website should call the school to pick up brochures/prospectus. Click "Admission" on the menu bar for more information.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column - Anniversary -->
+                <div class="content-column">
+                    <div class="content-card anniversary-card">
+                        <div class="social-link">
+                            <a href="#" class="facebook-link">
+                                <i class="fab fa-facebook"></i>
+                                facebook
+                            </a>
+                        </div>
+                        <h3>EXCERPTS FROM 60TH ANNIVERSARY</h3>
+                        <div class="card-content">
+                            <p>60th Anniversary Eve was an incredible experience with old students coming from all parts of Ghana and beyond.</p>
+                            <div class="anniversary-image">
+                                <img src="/images/placeholder.svg" alt="60th Anniversary Celebration" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects-section">
+        <div class="container">
+            <div class="content-grid">
+                <!-- Left Column - Projects -->
+                <div class="content-column">
+                    <div class="content-card projects-card">
+                        <h3>OLD STUDENTS' PROJECTS</h3>
+                        <div class="card-content">
+                            <p>Old Students of Dabala Senior High School (OSDA National) has constructed a state of the art Health Centre for DABASCO.</p>
+                            <div class="project-image">
+                                <img src="/images/placeholder.svg" alt="New Health Center" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column - News -->
+                <div class="content-column">
+                    <div class="news-items">
+                        <div class="news-item">
+                            <h4>OSDA National Inaugurated DABASCO Health Centre on Saturday, 27th April, 2024.</h4>
+                            <div class="news-image">
+                                <img src="/images/placeholder.svg" alt="Health Center Inauguration" />
+                            </div>
+                        </div>
+                        <div class="news-item">
+                            <h4>2023-2024 Senior Prefect Delivering Speech at 60th Anniversary on Saturday, 27th April, 2024.</h4>
+                            <div class="news-image">
+                                <img src="/images/placeholder.svg" alt="Senior Prefect Speech" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Projects Section -->
+    <section class="additional-projects">
+        <div class="container">
+            <div class="content-grid">
+                <!-- Left Column - More Projects -->
+                <div class="content-column">
+                    <div class="project-items">
+                        <div class="project-item">
+                            <h4>1993 Year Group of Old Students' Association (OSDA 93 - Old System) procured uniform for DABASCO Brass Band.</h4>
+                            <div class="project-image">
+                                <img src="/images/placeholder.svg" alt="Brass Band" />
+                            </div>
+                        </div>
+                        <div class="project-item">
+                            <h4>2001 Year Group of Old Students' Association (OSDA 2001) donated 25 Sets of Computers to DABASCO.</h4>
+                            <div class="project-image">
+                                <img src="/images/placeholder.svg" alt="Computer Donation" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column - More About -->
+                <div class="content-column">
+                    <div class="content-card about-card">
+                        <div class="about-image">
+                            <img src="/images/placeholder.svg" alt="School Celebration" />
+                        </div>
+                        <a href="about" class="about-button">More about DABASCO</a>
+                        <div class="separator">
+                            <div class="separator-line"></div>
+                            <div class="separator-diamond"></div>
+                            <div class="separator-line"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+@code {
+    private int currentSlide = 0;
+    private readonly string[] slideImages = {
+        "/images/placeholder.svg",
+        "/images/placeholder.svg",
+        "/images/placeholder.svg"
+    };
+
+    private void NextSlide()
+    {
+        currentSlide = (currentSlide + 1) % slideImages.Length;
+        StateHasChanged();
+    }
+
+    private void PreviousSlide()
+    {
+        currentSlide = currentSlide == 0 ? slideImages.Length - 1 : currentSlide - 1;
+        StateHasChanged();
+    }
+}
